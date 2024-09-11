@@ -1,4 +1,2 @@
-"use strict";
-(() => {
-})();
-//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFtdLAogICJzb3VyY2VzQ29udGVudCI6IFtdLAogICJtYXBwaW5ncyI6ICIiLAogICJuYW1lcyI6IFtdCn0K
+"use strict";var n=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var l=Object.getOwnPropertyNames;var c=Object.prototype.hasOwnProperty;var g=(i,t)=>{for(var e in t)n(i,e,{get:t[e],enumerable:!0})},P=(i,t,e,r)=>{if(t&&typeof t=="object"||typeof t=="function")for(let o of l(t))!c.call(i,o)&&o!==e&&n(i,o,{get:()=>t[o],enumerable:!(r=d(t,o))||r.enumerable});return i};var a=i=>P(n({},"__esModule",{value:!0}),i);var u={};g(u,{EnhancedEditor:()=>s});module.exports=a(u);var s=class{constructor(t){this.editor=t}GetMultiLineInSelection(){let t=this.editor.getCursor("from"),e=this.editor.getCursor("to");if(e.line<t.line){let r=e;e=t,t=r}return t.ch=0,e.ch=1/0,this.editor.setSelection(e,t),{txt:this.editor.getSelection(),startPos:t,endPos:e}}GetPasteTxt(t){let e=this.editor.getCursor();return this.editor.setSelection(t,e),{txt:this.editor.getSelection(),startPos:t,endPos:e}}getSelectedTag(){return this.editor.getSelection().replace(/#/,"")}};s.EOL=`(\r?
+|\r)`;

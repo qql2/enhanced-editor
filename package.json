@@ -1,10 +1,10 @@
 {
-  "name": "code-judge",
-  "version": "1.0.0",
-  "description": "Judge the code block information in the markdown",
+  "name": "enhanced-editor",
+  "version": "1.0.4",
+  "description": "Enhanced-editor for obsidian API",
   "main": "index.js",
   "scripts": {
-    "dev": "node esbuild.config.mjs",
+    "dev": "tsc -skipLibCheck --w && node esbuild.config.mjs",
     "build": "tsc -skipLibCheck && node esbuild.config.mjs production",
     "pub": "npm run build & npm publish"
   },
@@ -13,6 +13,7 @@
   "author": "qql1 <2482076557@qq.com> (http://github.com/qql2)",
   "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.17.18"
+    "esbuild": "^0.17.18",
+    "obsidian": "^1.2.5"
   }
 }

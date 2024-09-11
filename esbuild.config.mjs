@@ -4,9 +4,9 @@ import process from "process";
 const prod = (process.argv[2] === "production");
 
 const context = await esbuild.context({
-    entryPoints: ['src/index.ts'],
+    entryPoints: ['src/enhanced-editor.ts'],
     outfile: 'index.js',
-    external: [],
+    external: ["obsidian"],
     bundle: true,
     sourcemap: prod ? false : "inline",
     minify: prod ? true : false,
